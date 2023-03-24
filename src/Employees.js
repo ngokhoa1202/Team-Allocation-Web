@@ -24,7 +24,7 @@ const Employees = ({employees, selectedTeam, handleTeamCardClick, handleTeamSele
             {
               employees.map((employee) => (
                 // ternary operator
-                <div id={employee.id} className={(employee.teamName === selectedTeam ? 'card m-2 standout' : 'card m-2')} style={{cursor: "pointer"}} onClick={handleTeamCardClick}>
+                <div id={employee.id} key={employee.id} className={(employee.teamName === selectedTeam ? 'card m-2 standout' : 'card m-2')} style={{cursor: "pointer"}} onClick={handleTeamCardClick}>
                   {
                     (employee.gender === 'male') ? <img src={femaleProfile} className="card-img-top"/>
                                                 : <img src={maleProfile} className="card-img-top"/>
